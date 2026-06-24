@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     <!--imp for mobile responsiveness-->
+    <title> Wheelscape </title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- <header>   header is generally used for nav bar, and section for hero
+        <nav>
+            <a href=""></a>
+        </nav>
+    </header> -->
+    
+    <div class="hero"> <!--(div) container used to group and organize parts of a webpage-->
+        <div class="wheel"> <!--(class) name that can be shared by many elements so they can look or behave the same-->
+            <span class="floating icon1">𓍢ִ໋🀦⁺</span> <!--wraps "special word" so you can style or target it without affecting the rest of the paragraph-->
+            <span class="floating icon2">⋆🕮⁺</span>
+            <span class="floating icon3">⋆♬˚</span>
+            <span class="floating icon4">⋆🕮⁺</span>
+            <span class="floating icon5">⋆🕮⁺</span>
+        </div>
+        <h1> Wheelscape </h1>
+        <p>A world where every choice leads somewhere.</p>
+        <br>
+        <button id="open-pop-up"> Create + </button> <!--unique name given to one specific element-->
+        <br>
+        <button id="buttons"> My Wheels </button>
+        <hr>
+    </div>
+
+    <section class="premadeWheels">
+        <h2> My Wheels </h2>
+        <div class="card">
+            <p>Your world is empty.</p>
+            <p>Create your first wheel and begin exploring.</p>
+        </div>
+    </section>
+
+    <div class="pop-up" id="pop-up-id">
+        <h2>Create Wheel</h2>
+        <p>Name your wheel, add your options, and let fate decide.</p>
+        <input type="text" placeholder="enter wheel name">
+        <div class="options">
+            <input type="text" placeholder="enter options">
+            <button class="add-btn">+</button>
+        </div>
+        <p>(no options yet)</p>
+
+        <div class="pop-up-actions">
+            <button class="cancel-btn" id="close-pop-up">Cancel</button>
+            <button class="create-btn">Create</button>
+        </div>
+        
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

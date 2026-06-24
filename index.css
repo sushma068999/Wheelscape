@@ -1,0 +1,262 @@
+*{     /*for every element on page*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 50px;
+    font-weight: 100;
+    height: 80px;
+}
+
+h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 40px;
+    font-weight: 100;
+    padding-top: 100px;
+}
+
+p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/*----------------------------------------------------------*/
+
+.hero {
+    width: 100%;
+    min-height: 100vh;     /*visible screen*/
+
+    position: relative;     /*so elements inside it can be positioned relative to it(hero)*/
+
+    display: flex;     /*takes control for elements under it*/
+    flex-direction: column;     /*elements one below other*/
+    justify-content: center; /*controls how items are positioned on the main axis (the direction set by flex-direction) */
+    align-items: center;
+    text-align: center;
+
+    /*no effect cuz of flex-box, margin, fixed dimentions(height,width,min-height), etc*/
+    box-sizing: border-box;
+    padding: 2rem;     /*space between hero's border & inside content, only visble when content is close to edges*/
+
+    background-image: url("https://i.pinimg.com/1200x/1e/94/1f/1e941fb560b5cb65f3ec8124fe1b455a.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    /* text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); */   
+}
+
+.icon1 {
+    position: absolute;     /*lets user place elements wherever reqd*/
+    top: 10%;
+    left: 50%;
+}
+.icon2 {
+    position: absolute;
+    top: 35%;
+    right: 15%;
+}
+.icon3 {
+    position: absolute;
+    bottom: 15%;
+    right: 25%;
+}
+.icon4 {
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+}
+.icon5 {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+}
+
+@keyframes float{     /*animation > starts at 0, raises up 50%, comes back to original position in 100%*/
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(10deg);     /*slight tilt > 10degree*/
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.floating {
+    font-size: 35px;
+    animation: float 4s ease-in-out infinite;     /*float > animation name, ease-in-out > starts slow, fast in middle, ends slow*/
+}
+
+#buttons,
+#open-pop-up {
+    height: 30px;
+    width: 150px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 12px 24px;     /*space inside button, t-b, u-d*/
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: flex;     /*centers text vertically*/
+    justify-content: center;
+    align-items: center;
+}
+button:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+    /* background-color: #2c3e50;
+    transform: scale(1.1); */
+}
+
+/*----------------------------------------------------------*/
+
+.premadeWheels {
+    width: 100%;
+    min-height: 100vh;
+
+    background: linear-gradient(to bottom, #000000, #52494A);     /*shaded section color*/
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    color: #fff;
+}
+
+.card {
+    width: 900px;
+    padding: 60px;
+    margin: 40px auto;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+}
+
+/*----------------------------------------------------------*/
+
+.pop-up {
+    display: none;
+    position: fixed;     /*should be fixed in place even when page is scrolled*/
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 20px;
+    gap: 15px;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+.pop-up.active{
+    display: flex;
+    flex-direction: column;
+}
+.pop-up-actions {
+    display: flex;
+    gap: 10px;
+}
+.pop-up h2 {
+    padding-top: 10px;
+    text-align: center;
+}
+.pop-up p {
+    font-size: medium;
+    text-align: center;
+}
+.pop-up input {
+    /* height: 30px; */
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    border-radius: 10px;
+    padding: 12px 16px;     /*space inside button, t-b, u-d */
+}
+input:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.add-btn {
+    height: 40px;
+    width: 50px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: flex;     /*centers text vertically*/
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel-btn,
+.create-btn {
+    flex: 1;
+    height: 40px;
+    width: 150px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    display: flex;     /*centers text vertically*/
+    justify-content: center;
+    align-items: center;
+}
+
+/*----------------------------------------------------------*/
+
+.options {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    /* align-items: stretch; */
+}
+.options input {
+    /* height: 54px; */
+    /* height: 30px; */
+    flex: 1;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 0;
+}
