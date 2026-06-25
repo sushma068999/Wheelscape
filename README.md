@@ -25,12 +25,13 @@ Live demo: [link]
 - JavaScript
 
 ## Future Improvements
-- Wheel spinning animation
+- Custom wheel sounds
+- Musical toggles
+- Constellation-like animated wheel in hero section
 - Sub-wheels for nested decisions
 - Remove selected options automatically
 - Save wheels locally
-- Edit existing wheels
-- Delete wheels
+- Edit & delete existing wheels
 
 ## Author
 Sushma Rai
