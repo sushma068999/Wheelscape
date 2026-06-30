@@ -10,8 +10,12 @@ Live demo: [link]
 - Clean and aesthetic interface
 - Responsive layout
 - Decorative hero section
+- Animated wheel in hero section
 
 ## Screenshots
+### Hero Wheel:
+
+
 ### Dashboard:
 <img width="1366" height="1282" alt="dashboard" src="https://github.com/user-attachments/assets/bccb918d-3f25-4e47-80a4-bad09fb3d315" />
 
@@ -27,7 +31,6 @@ Live demo: [link]
 ## Future Improvements
 - Custom wheel sounds
 - Musical toggles
-- Constellation-like animated wheel in hero section
 - Sub-wheels for nested decisions
 - Remove selected options automatically
 - Save wheels locally
