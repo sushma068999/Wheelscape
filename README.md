@@ -1,3 +1,4 @@
+
 # Wheelscape
 A decision-making web app that helps users create custom wheels and spin them to make random choices.
 
@@ -14,13 +15,13 @@ Live demo: [link]
 
 ## Screenshots
 ### Hero Wheel:
-
+<img width="1280" height="568" alt="homepage_gif" src="https://github.com/user-attachments/assets/b029d332-efe2-458d-8b51-acabb8ca1723" />
 
 ### Dashboard:
-<img width="1366" height="1282" alt="dashboard" src="https://github.com/user-attachments/assets/bccb918d-3f25-4e47-80a4-bad09fb3d315" />
+<img width="1366" height="1214" alt="dashboard" src="https://github.com/user-attachments/assets/adbdab4f-a196-408a-adec-e90ea0401b2a" />
 
 ### Create pop-up:
-<img width="1354" height="639" alt="pop-up" src="https://github.com/user-attachments/assets/cffd373c-8d23-42e9-a2d1-f4c205d370be" />
+<img width="1351" height="607" alt="pop-up" src="https://github.com/user-attachments/assets/f4ba74e0-bff4-4e78-aebb-36d0d3ae6729" />
 
 
 ## Tech Stack
