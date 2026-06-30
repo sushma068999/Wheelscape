@@ -15,12 +15,84 @@
     </header> -->
     
     <div class="hero"> <!--(div) container used to group and organize parts of a webpage-->
+
         <div class="wheel"> <!--(class) name that can be shared by many elements so they can look or behave the same-->
-            <span class="floating icon1">𓍢ִ໋🀦⁺</span> <!--wraps "special word" so you can style or target it without affecting the rest of the paragraph-->
-            <span class="floating icon2">⋆🕮⁺</span>
-            <span class="floating icon3">⋆♬˚</span>
-            <span class="floating icon4">⋆🕮⁺</span>
-            <span class="floating icon5">⋆🕮⁺</span>
+
+            <svg class="constellation" viewBox="0 0 1100 1100">
+
+                <defs>
+                    <!-- End arrow -->
+                    <marker
+                        id="arrow-end"
+                        markerWidth="10"
+                        markerHeight="10"
+                        refX="8"
+                        refY="3"
+                        orient="auto"
+                        markerUnits="strokeWidth">
+
+                        <path
+                        d="M0,0 L0,6 L9,3 Z"
+                        fill="rgba(255,255,255,.6)" />
+                    </marker>
+
+                    <!-- Start arrow -->
+                    <marker
+                        id="arrow-start"
+                        markerWidth="10"
+                        markerHeight="10"
+                        refX="2"
+                        refY="3"
+                        orient="auto"
+                        markerUnits="strokeWidth">
+
+                        <path
+                        d="M9,0 L9,6 L0,3 Z"
+                        fill="rgba(255,255,255,.6)" />
+                    </marker>
+                </defs>
+
+                <line 
+                    x1="550" 
+                    y1="70" 
+                    x2="550" 
+                    y2="1080"
+                    marker-start="url(#arrow-start)"
+                    marker-end="url(#arrow-end)"/>
+                <line 
+                    x1="1010"
+                    y1="320" 
+                    x2="90" 
+                    y2="780"
+                    marker-start="url(#arrow-start)"
+                    marker-end="url(#arrow-end)"/>
+                <line 
+                    x1="1010" 
+                    y1="780" 
+                    x2="90" 
+                    y2="320"
+                    marker-start="url(#arrow-start)"
+                    marker-end="url(#arrow-end)"/>
+            </svg>
+
+            <span class="spinning icon1">
+                <img src="icons/moon_icon.png" alt="Moon">
+            </span> <!--wraps "special word" so you can style or target it without affecting the rest of the paragraph-->
+            <span class="spinning icon2">
+                <img src="icons/balance_icon.png" alt="Equality">
+            </span>
+            <span class="spinning icon3">
+                <img src="icons/hourglass_icon.png" alt="Time">
+            </span>
+            <span class="spinning icon4">
+                <img src="icons/mirror_icon.png" alt="Direction">
+            </span>
+            <span class="spinning icon5">
+                <img src="icons/cards_icon.png" alt="Luck">
+            </span>
+            <span class="spinning icon6">
+                <img src="icons/key_icon.png" alt="Possibility">
+            </span>
         </div>
         <h1> Wheelscape </h1>
         <p>A world where every choice leads somewhere.</p>

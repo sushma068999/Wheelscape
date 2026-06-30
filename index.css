@@ -30,7 +30,8 @@ p {
     width: 100%;
     min-height: 100vh;     /*visible screen*/
 
-    position: relative;     /*so elements inside it can be positioned relative to it(hero)*/
+    position: relative;     /*hero in normal page flow, still acts like wheel parent*/
+    overflow: hidden;     /*entended hero parts dont show outside hero*/
 
     display: flex;     /*takes control for elements under it*/
     flex-direction: column;     /*elements one below other*/
@@ -48,49 +49,6 @@ p {
     background-repeat: no-repeat;
     color: #fff;
     /* text-shadow: 0 0 15px rgba(255, 255, 255, 0.3); */   
-}
-
-.icon1 {
-    position: absolute;     /*lets user place elements wherever reqd*/
-    top: 10%;
-    left: 50%;
-}
-.icon2 {
-    position: absolute;
-    top: 35%;
-    right: 15%;
-}
-.icon3 {
-    position: absolute;
-    bottom: 15%;
-    right: 25%;
-}
-.icon4 {
-    position: absolute;
-    bottom: 15%;
-    left: 25%;
-}
-.icon5 {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-}
-
-@keyframes float{     /*animation > starts at 0, raises up 50%, comes back to original position in 100%*/
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-15px) rotate(10deg);     /*slight tilt > 10degree*/
-    }
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
-.floating {
-    font-size: 35px;
-    animation: float 4s ease-in-out infinite;     /*float > animation name, ease-in-out > starts slow, fast in middle, ends slow*/
 }
 
 #buttons,
@@ -118,13 +76,134 @@ button:hover {
     transform: scale(1.1); */
 }
 
+.hero h1,
+.hero p,
+.hero button {
+    position: relative;
+    z-index: 2;
+}
+
+/*----------------------------------------------------------*/
+
+.wheel {
+    position: absolute;     /*so elements inside it can be positioned relative to it(hero)*/
+    z-index: 0;
+    pointer-events: none;     /*pretend wheel doesnt exist so buttons can be clicked*/
+
+    transform: translate(-50%, -50%);
+
+    width: 1100px;
+    height: 1100px;
+
+    border-radius: 50%;
+    animation: spin 40s linear infinite;
+}
+
+.icon1 {
+    position: absolute;
+    top: -50px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.icon2 {
+    position: absolute;
+    top: 20%;
+    right: 70px;
+}
+
+.icon3 {
+    position: absolute;
+    bottom: 30%;
+    right: 70px;
+}
+
+.icon4 {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.icon5 {
+    position: absolute;
+    bottom: 30%;
+    left: 0.5px;
+}
+
+.icon6 {
+    position: absolute;
+    top: 19%;
+    left: 10px;
+}
+
+.icon2 img {
+    width: 120px;
+}
+.icon3 img{
+    width: 90px;
+}
+.icon4 img {
+    width: 110px;
+}
+.icon1 img,
+.icon5 img {
+    width: 110px;
+}
+.icon6 img {
+    width: 125px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinning {
+    width: 35px;
+    height: 35px;
+    /* object-fit: contain; */
+    opacity: 1;
+    filter: brightness(.95);
+    animation: none;
+}
+
+.constellation{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:-1;
+}
+
+.constellation line{
+    position:absolute;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.35);
+    transform-origin:left center;
+    /* opacity: 25;
+    box-shadow:0 0 8px rgba(255,255,255,.5); */
+
+    stroke: rgba(255,255,255,.25);
+    stroke-width:1.5;
+    stroke-linecap: round;
+
+    filter: drop-shadow(0 0 6px rgba(255,255,255,.35));
+}
+
 /*----------------------------------------------------------*/
 
 .premadeWheels {
     width: 100%;
     min-height: 100vh;
 
-    background: linear-gradient(to bottom, #000000, #52494A);     /*shaded section color*/
+    background: linear-gradient(to bottom, #000000, #4E4445, #31313D);     /*shaded section color*/
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     color: #fff;
@@ -190,7 +269,7 @@ button:hover {
     transition: all 0.3s ease;
 
     border-radius: 10px;
-    padding: 12px 16px;     /*space inside button, t-b, u-d */
+    padding: 12px 16px;
 }
 input:hover {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
@@ -210,7 +289,7 @@ input:hover {
     cursor: pointer;
     transition: all 0.3s ease;
 
-    display: flex;     /*centers text vertically*/
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -230,7 +309,7 @@ input:hover {
     cursor: pointer;
     transition: all 0.3s ease;
 
-    display: flex;     /*centers text vertically*/
+    display: flex;
     justify-content: center;
     align-items: center;
 }
